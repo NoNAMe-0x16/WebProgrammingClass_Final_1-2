@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="asset/css/donation_style.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+	</head>
+	
+	<body>
+		<div class="donate-card">
+			<h1>'후원' 해주세요!</h1>
+			<p>올라운더프로그래머가 되기 위해 후원해주세요!</p>
+			<p>적절한 후원금은 제게 큰 힘이됩니다.</p>
+			<br></br>
+			<div class="donate-pic"></div>
+			<br></br>
+			<div class="donate-colors">
+				<span class="blue active" data-color="#7ed6df" data-pic="url(asset/images/blue1.jpg)"></span>
+				<span class="green" data-color="#badc58" data-pic="url(asset/images/green1.jpg)"></span>
+				<span class="yellow" data-color="#f9ca24" data-pic="url(asset/images/yellow1.jpg)"></span>
+				<span class="rose" data-color="#ff7979" data-pic="url(asset/images/red1.jpg)"></span>
+			</div>
+			<div class="donate-info">
+				<div class="donate-price">$???</div>
+				<a href="#" class="donate-button">Donation</a>
+			</div>
+		</div>
+		<script>
+		  $(".donate-colors span").click(function(){
+			$(".donate-colors span").removeClass("active");
+			$(this).addClass("active");
+			$("body").css("background",$(this).attr("data-color"));
+			$(".donate-price").css("color",$(this).attr("data-color"));
+			$(".donate-button").css("color",$(this).attr("data-color"));
+			$(".donate-pic").css("background-image",$(this).attr("data-pic"));
+		  });
+		</script>
+	</body>
+</html>

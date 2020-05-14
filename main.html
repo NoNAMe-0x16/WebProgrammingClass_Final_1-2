@@ -1,0 +1,211 @@
+﻿<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--viewport는 모바일홈페이지를 위한 속성이다. initial-scale은 페이지가 처음 로딩될 때 줌 레벨을 조정한다 
+		device-width는 100% 스케일에서 CSS 픽셀들로 계산된 화면의 폭을 의미한다.-->
+	<meta name = "keyword" content = "HTML5, CSS3, JavaScript, C, C++, C#, Java, Unity, Python">
+	<meta name = "description" content = "Personal homepage by_felix snow">
+
+	<title>felix snow :: allrounder programmer</title>
+
+	<link rel="stylesheet" href="asset/css/mystyle_test.css">
+	<script src="https://kit.fontawesome.com/0f016a68f0.js" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+	<header>
+		<div>
+			<span>
+				<input type="checkbox" id="menuicon">
+				<label for="menuicon"><span></span><span></span><span></span></label>
+				<div class="sidebar">
+					<div class="container">
+						<div class="menu">
+							<!--<ul>
+								<li class="item" class="btn">
+									<i class="fas fa-user"></i> introduce
+									<ul class="sub-menu">
+										<li><a href="#">곰팡이 프로젝트</a></li>
+										<li><a href="#">스토밍 마스터</a></li>
+										<li><a href="#">포트폴리오</a></li>
+									</ul>
+								</li>
+								<li class="item" class="btn">
+									<i class="fas fa-envelope"></i> Contact
+									<ul class="sub-menu">
+										<li><a href="#">mail</a></li>
+										<li><a href="donation.html">Donation</a></li>
+									</ul>
+								</li>
+								<li class="item" class="btn">
+									<i class="fas fa-cog"></i> 설정
+									<ul class="sub-menu">
+										<li><a href="#">회원 정보 변경</a></li>
+									</ul>
+								</li>
+								<li class="item" class="btn"><i class="fas fa-sign-out-alt"></i> 로그아웃</li>
+							</ul>-->
+							<li class="item" id='profile'>
+								<a href="#profile" class="btn"><i class="fas fa-user"></i> introduce</a>
+								<div class="sub-menu">
+									<a href="#">곰팡이 프로젝트</a>
+									<a href="#">스토밍 마스터</a>
+									<a href="#">포트폴리오</a>
+								</div>
+							</li>
+							
+							<li class="item" id="messages">
+								<a href="#messages" class="btn"><i class="fas fa-envelope"></i> Contact</a>
+								<div class="sub-menu">
+									<a href="#">mail</a>
+									<a href="donation.html">Donation</a>
+								</div>
+							</li>
+							
+							<li class="item" id="settings">
+								<a href="#settings" class="btn"><i class="fas fa-cog"></i> 설정</a>
+								<div class="sub-menu">
+									<a href="#">회원 정보 변경</a>
+								</div>
+							</li>
+							
+							<li class="item">
+								<a href="asset/php/logout.php" class="btn"><i class="fas fa-sign-out-alt"></i> 로그아웃</a>
+							</li>
+						</div>
+					</div>
+				</div>
+			</span>
+			<span>
+				<a href="main.html">
+					<img  src="asset/images/homepage_logo.png" width="250px">
+				</a>
+			</span>
+			<span>
+			<!-- 쿠키체크 -->
+				<?php
+					$id = $_COOKIE['id'];
+					if(empty( $id )){
+						echo 
+						'<div class="login-btn">
+							<a href="loginform.html" class="btn_l"><i class="fas fa-sign-in-alt"></i>&nbsp로그인</a>
+						</div>';
+					} else{
+						echo
+						'<div class="login-done">
+							<p>환영합니다. <?= $id?> 님.</p>
+						</div>';
+					}
+				?>
+			</span>
+		</div>
+	</header>
+	<section>
+		<br>
+		<h2 align="center">INFORMATION</h2>
+		<div class="center">
+			<div class="card c_middle">
+				<div class="front">
+					<img src="asset/images/cardflip.jpg" alt="">
+				</div>
+				<div class="back">
+					<div class="back-content c_middle">
+						<h2>오규태</h2>
+						<p>allrounder_programmer</p>
+						<div class="sm">
+							<a href="https://www.facebook.com/people/%EC%98%A4%EA%B7%9C%ED%83%9C/100008368022629"><i class="fab fa-facebook-f"></i></a>
+							<a href="https://www.instagram.com/wagyu_shark/?hl=ko"><i class="fab fa-instagram"></i></a>
+							<a href="https://hk.linkedin.com/in/%EA%B7%9C%ED%83%9C-%EC%98%A4-b26582189/%7Bcountry%3Dus%2C+language%3Den%7D?trk=people-guest_profile-result-card_result-card_full-click"><i class="fab fa-linkedin-in"></i></a>
+							<a href="https://www.youtube.com/channel/UCWOrUkCj5yBi6TGgRsqnRqQ"><i class="fab fa-youtube"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="explain">	
+				<table>
+					<tr>
+						<td><a href="#"><i class="fas fa-signature"></i></a></td>
+						<td><h3> 닉네임</h3></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><p> CUTE_SHARK, WAGYU_SHARK, felix_snow, edward</p></td>
+					</tr>
+					<tr>
+						<td><a href="#"><i class="fas fa-mug-hot"></i></a></td>
+						<td><h3> 취미</h3></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><p> 게임, 농구, 주짓수, 그림, 노래, 독서, 영화, etc..</p></td>
+					</tr>
+					<tr>
+						<td><a href="#"><i class="fas fa-globe"></i></a> </td>
+						<td><h3> 사용 언어</h3></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><p>한국어, 영어 </p></td>
+					</tr>
+					<tr>
+						<td><a href="#"><i class="fas fa-laptop"></i></a> </td>
+						<td><h3> 컴퓨터 언어</h3></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><p>C, C++, C#, JAVA, Python</p></td>
+					</tr>
+					<tr>
+						<td><a href="#"><i class="fas fa-beer"></i></a></td>
+						<td><h3> 주량</h3></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><p> 3잔 ~ 1잔</p></td>
+					</tr>
+					<br>
+				</table>
+			</div>
+		</div>
+		<div class="box">
+			<div class="about">
+				<h2>_____"Fortis fortuna adiuvat"</h2>
+					<br>
+					<p>_____ " 행운은 용감한 자를 돕는다. "</p>
+					<p>_____ 2019_02_05_in switzer land</p>
+			</div>
+			<div class="figure"></div>
+		</div>
+		<a href="#" class="gotopbtn"> <i class="fas fa-arrow-up"></i></a>
+	</section>
+</body>
+
+<footer>
+	<div class="downside">
+		<br>
+		<p>Copyright (C) 2019 felix_snow All Right Reserved</p>
+		<br>
+		<a class="btn_s" href="https://www.facebook.com/people/%EC%98%A4%EA%B7%9C%ED%83%9C/100008368022629">
+			<i class="fab fa-facebook-f"></i>
+		</a>
+		<a class="btn_s" href="#">
+			<i class="fab fa-twitter"></i>
+		</a>
+		<a class="btn_s" href="https://hk.linkedin.com/in/%EA%B7%9C%ED%83%9C-%EC%98%A4-b26582189/%7Bcountry%3Dus%2C+language%3Den%7D?trk=people-guest_profile-result-card_result-card_full-click">
+			<i class="fab fa-linkedin-in"></i>
+		</a>
+		<a class="btn_s" href="https://www.instagram.com/wagyu_shark/?hl=ko">
+			<i class="fab fa-instagram"></i>
+		</a>
+		<a class="btn_s" href="https://www.youtube.com/channel/UCWOrUkCj5yBi6TGgRsqnRqQ">
+			<i class="fab fa-youtube"></i>
+		</a>
+	</div>
+
+</footer>
+
+</html>

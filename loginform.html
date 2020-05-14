@@ -1,0 +1,29 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>Login_felix-snow</title>
+		<link rel="stylesheet" href="asset/css/login_style.css">
+		<script src="https://kit.fontawesome.com/0f016a68f0.js" crossorigin="anonymous"></script>
+	</head>
+	<body>	
+		<div id="login-box">
+			<div class="left-box">
+				<h1> 로그인</h1>
+				<form action="asset/php/login_user.php" method="POST">
+				<input type="text" name="email" placeholder="Email"/>
+				<input type="password" name="password" placeholder="Password"/>
+				<input type="submit" name="signIn-button" value="로그인"/>
+				<p>계정이 없나요?</p><p>그럼 <a href="registerform.html">회원가입</a> 하세요!</p>
+				</form>
+			</div>
+			<div class="right-box">
+				<span class="signinwith">다른 계정으로<br/>로그인하세요!</span>
+				<button class="social facebook"><i class="fab fa-facebook"></i> 페이스북 로그인</button>    
+				<button class="social Naver">네이버 로그인</button> 
+				<button class="social Kakao">카카오 로그인</button>     
+			</div>
+			<div class="or">OR</div>
+		</div>
+	</body>
+</html>
